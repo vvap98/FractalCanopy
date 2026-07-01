@@ -1,7 +1,7 @@
 import tkinter as tk
 import math
 
-branchAngle = 20
+branchAngle = 19.5
 recursionGens = 0
 recursionLimit = 30
 
@@ -23,6 +23,9 @@ def drawBranch(x,y,length,angle): #len is the length of the branch
 def slider_changed(event):
     global branchAngle
     branchAngle = slider.get()
+    canvas.delete("all")
+    drawBranch(300,400 -20,100,0)
+    
 #setting up the canvas   
 root = tk.Tk()
 root.geometry('800x600')
